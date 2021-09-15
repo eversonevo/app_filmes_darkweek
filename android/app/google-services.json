@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "588988665479",
+    "project_id": "app-filmes-darkweek-f6c44",
+    "storage_bucket": "app-filmes-darkweek-f6c44.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:588988665479:android:897df5d11cd994474e3222",
+        "android_client_info": {
+          "package_name": "com.example.app_filmes_darkweek"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "588988665479-0bhhfe1vq8p4gpjsfrvnfafvfsdo5ka6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.app_filmes_darkweek",
+            "certificate_hash": "0c8219dd2542167164f2f4740933a8a870cc9e82"
+          }
+        },
+        {
+          "client_id": "588988665479-25sh2egsrj5909kfunl188dmmbr1oc4e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmdOFIQXYS7y96ttDLw8v5YoQi6wxM1RU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "588988665479-25sh2egsrj5909kfunl188dmmbr1oc4e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
