@@ -1,6 +1,7 @@
 import 'package:app_filmes_darkweek/app/services/login/login_services.dart';
 import 'package:app_filmes_darkweek/app/ui/loader/loader_mixin.dart';
 import 'package:app_filmes_darkweek/app/ui/messages/messages_mixin.dart';
+
 import 'package:get/get.dart';
 
 class LoginController extends GetxController with LoaderMixin, MessagesMixin {
@@ -30,6 +31,7 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
       message(
           MessageModel.info(title: "Sucesso!", message: "Você está logado"));
     } on Exception catch (e) {
+      print(e);
       loading.value = false;
       message(MessageModel.error(title: "Erro", message: "Erro ao logar"));
     }
