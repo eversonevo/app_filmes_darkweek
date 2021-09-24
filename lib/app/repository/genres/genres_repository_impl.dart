@@ -31,6 +31,7 @@ class GenresRepositoryImpl implements GenresRepository {
     });
 
     if (result.hasError) {
+      // ignore: avoid_print
       print("Erro ao buscar o genres ${result.statusText}");
       throw Exception("Erro ao buscar gêneros");
     }

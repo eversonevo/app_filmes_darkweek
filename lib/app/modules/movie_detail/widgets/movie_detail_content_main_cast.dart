@@ -4,6 +4,7 @@ import 'package:app_filmes_darkweek/models/movie_detail_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+// ignore: must_be_immutable
 class MovieDetailContentMainCast extends StatelessWidget {
   MovieDetailModel? movie;
 

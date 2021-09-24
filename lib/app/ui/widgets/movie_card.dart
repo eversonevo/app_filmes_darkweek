@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
+// ignore: must_be_immutable
 class MovieCard extends StatelessWidget {
   MovieModel movie;
   MovieCard({Key? key, required this.movie, required this.favoriteCallBack})

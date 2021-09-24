@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/FilmesAppIcon.ttf
 ///
-/// 
+///
 /// * Web Symbols, Copyright (c) 2011 by Just Be Nice studio. All rights reserved.
 ///         Author:    Just Be Nice studio
 ///         License:   SIL (http://scripts.sil.org/OFL)
@@ -29,7 +29,12 @@ class FilmesAppIcon {
   static const _kFontFam = 'FilmesAppIcon';
   static const String? _kFontPkg = null;
 
-  static const IconData heart = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData heart_empty = IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
-  static const IconData hand_holding_heart = IconData(0xf4be, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData heart =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  // ignore: constant_identifier_names
+  static const IconData heart_empty =
+      IconData(0xe801, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  // ignore: constant_identifier_names
+  static const IconData hand_holding_heart =
+      IconData(0xf4be, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }

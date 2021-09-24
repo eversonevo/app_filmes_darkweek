@@ -30,6 +30,7 @@ class LoginController extends GetxController with LoaderMixin, MessagesMixin {
       message(
           MessageModel.info(title: "Sucesso!", message: "Você está logado"));
     } on Exception catch (e) {
+      // ignore: avoid_print
       print(e);
       loading.value = false;
       message(MessageModel.error(title: "Erro", message: "Erro ao logar"));

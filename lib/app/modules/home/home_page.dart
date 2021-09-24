@@ -23,7 +23,7 @@ class HomePage extends GetView<HomeController> {
           onTap: controller.goToPage,
           currentIndex: controller.pageIndex,
 
-          items: [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.movie), label: 'Filmes'),
             BottomNavigationBarItem(
                 icon: Icon(FilmesAppIcon.hand_holding_heart),
@@ -39,18 +39,18 @@ class HomePage extends GetView<HomeController> {
         initialRoute: '/movies',
         key: Get.nestedKey(HomeController.NAVIGATOR_KEY),
         onGenerateRoute: (settings) {
-          print('xxxxx' + settings.name.toString());
+          //print('xxxxx' + settings.name.toString());
           switch (settings.name) {
             case '/movies':
               return GetPageRoute(
                 settings: settings,
-                page: () => MoviesPage(),
+                page: () => const MoviesPage(),
                 binding: MoviesBindings(),
               );
             case '/favorites':
               return GetPageRoute(
                 settings: settings,
-                page: () => FavoritesPage(),
+                page: () => const FavoritesPage(),
                 binding: FavoritesBindings(),
               );
           }

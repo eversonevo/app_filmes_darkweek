@@ -1,6 +1,7 @@
 import 'package:app_filmes_darkweek/models/movie_detail_model.dart';
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class MovieDetailContentCredits extends StatelessWidget {
   MovieDetailModel? movie;
 

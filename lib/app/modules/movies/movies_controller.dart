@@ -46,6 +46,7 @@ class MoviesController extends GetxController with MessagesMixin {
       // limpa a observavel genres e renova
       await getMovies();
     } catch (e) {
+      // ignore: avoid_print
       print(e);
     }
   }
@@ -77,7 +78,9 @@ class MoviesController extends GetxController with MessagesMixin {
       topRatedMovies.assignAll(topRatedMoviesData);
       _topRatedMoviesOriginal = popularMoviesData;
     } catch (e, s) {
+      // ignore: avoid_print
       print(e);
+      // ignore: avoid_print
       print(s);
       _message(MessageModel.error(
           title: 'Erro', message: 'Erro ao buscar dados da página'));

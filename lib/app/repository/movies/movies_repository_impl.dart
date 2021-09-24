@@ -32,6 +32,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
     );
 
     if (result.hasError) {
+      // ignore: avoid_print
       print('Erro ao buscar popular movies [${result.statusText}]');
 
       throw Exception('Erro ao buscar popular movies');
@@ -61,6 +62,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
     );
 
     if (result.hasError) {
+      // ignore: avoid_print
       print('Erro ao buscar top movies [${result.statusText}]');
 
       throw Exception('Erro ao buscar top movies');
@@ -82,6 +84,7 @@ class MoviesRepositoryImpl implements MoviesRepository {
     });
 
     if (result.hasError) {
+      // ignore: avoid_print
       print('Erro ao buscar detalhes dos movies [${result.statusText}]');
 
       throw Exception('Erro ao buscar detalhes do movies');
@@ -110,7 +113,9 @@ class MoviesRepositoryImpl implements MoviesRepository {
         favoriteData.docs.first.reference.delete();
       }
     } catch (e, s) {
+      // ignore: avoid_print
       print(e);
+      // ignore: avoid_print
       print(s);
       rethrow;
     }

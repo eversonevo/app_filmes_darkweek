@@ -34,7 +34,9 @@ class MovieDetailController extends GetxController
       movie.value = movieDetailData;
       loading(false);
     } catch (e, s) {
+      // ignore: avoid_print
       print(e);
+      // ignore: avoid_print
       print(s);
       loading(false);
       message(MessageModel.error(

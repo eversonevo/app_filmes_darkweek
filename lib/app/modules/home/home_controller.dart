@@ -3,7 +3,9 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
   final _pageIndex = 0.obs;
+  // ignore: constant_identifier_names
   static const NAVIGATOR_KEY = 1;
+  // ignore: constant_identifier_names
   static const INDEX_PAGE_EXIT = 2;
 
   final _pages = ['/movies', '/favorites'];
