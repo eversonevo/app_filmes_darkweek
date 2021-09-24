@@ -1,3 +1,4 @@
+import 'package:app_filmes_darkweek/app/modules/favorites/favorites_bindings.dart';
 import 'package:app_filmes_darkweek/app/modules/favorites/favorites_page.dart';
 import 'package:app_filmes_darkweek/app/modules/home/home_controller.dart';
 import 'package:app_filmes_darkweek/app/modules/movies/movies_bindings.dart';
@@ -50,6 +51,7 @@ class HomePage extends GetView<HomeController> {
               return GetPageRoute(
                 settings: settings,
                 page: () => FavoritesPage(),
+                binding: FavoritesBindings(),
               );
           }
 

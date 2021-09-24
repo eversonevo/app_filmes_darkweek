@@ -21,8 +21,7 @@ class CastModel {
   factory CastModel.fromMap(Map<String, dynamic> map) {
     return CastModel(
       name: map['original_name'] ?? '',
-      image:
-          map['https://image.tmdb.org/t/p/w200/${map['profile_path']}'] ?? '',
+      image: map['https://image.tmdb.org/t/p/w200${map['profile_path']}'] ?? '',
       character: map['character'] ?? '',
     );
   }

@@ -1,6 +1,7 @@
 import 'package:app_filmes_darkweek/app/application/rest_client/rest_client.dart';
 import 'package:app_filmes_darkweek/models/movie_detail_model.dart';
 import 'package:app_filmes_darkweek/models/movie_model.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_remote_config/firebase_remote_config.dart';
 
 import './movies_repository.dart';
@@ -87,5 +88,46 @@ class MoviesRepositoryImpl implements MoviesRepository {
     }
 
     return result.body;
+  }
+
+  // pode ser em outro arquivo
+
+  @override
+  Future<void> addOrRemoveFavorite(String userId, MovieModel movie) async {
+    try {
+      var favoriteCollection = FirebaseFirestore.instance
+          .collection('favorites')
+          .doc(userId)
+          .collection('movies');
+
+      if (movie.favorite) {
+        favoriteCollection.add(movie.toMap());
+      } else {
+        var favoriteData = await favoriteCollection
+            .where('id', isEqualTo: movie.id)
+            .limit(1)
+            .get();
+        favoriteData.docs.first.reference.delete();
+      }
+    } catch (e, s) {
+      print(e);
+      print(s);
+      rethrow;
+    }
+  }
+
+  @override
+  Future<List<MovieModel>> getFavoritiesmovies(String userId) async {
+    var favoritiesMovies = await FirebaseFirestore.instance
+        .collection('favorites')
+        .doc(userId)
+        .collection('movies')
+        .get();
+
+    final listFavorites = <MovieModel>[];
+    for (var movie in favoritiesMovies.docs) {
+      listFavorites.add(MovieModel.fromMap(movie.data()));
+    }
+    return listFavorites;
   }
 }

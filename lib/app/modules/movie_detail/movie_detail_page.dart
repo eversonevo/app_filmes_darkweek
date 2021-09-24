@@ -1,4 +1,5 @@
-import 'package:app_filmes_darkweek/app/ui/widgets/movie_detail_header.dart';
+import 'package:app_filmes_darkweek/app/modules/movie_detail/widgets/movie_detail_content.dart';
+import 'package:app_filmes_darkweek/app/modules/movie_detail/widgets/movie_detail_header.dart';
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
 import './movie_detail_controller.dart';
@@ -14,8 +15,12 @@ class MovieDetailPage extends GetView<MovieDetailController> {
       ),
       body: SingleChildScrollView(
         child: Obx(() => Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 MovieDetailHeader(movie: controller.movie.value),
+                MovieDetailContent(
+                  movie: controller.movie.value,
+                )
               ],
             )),
       ),

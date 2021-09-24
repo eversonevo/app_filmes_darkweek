@@ -20,7 +20,7 @@ class HomeController extends GetxController {
     if (page == INDEX_PAGE_EXIT) {
       _loginService.logout();
     } else {
-      Get.offAndToNamed(_pages[page], id: NAVIGATOR_KEY);
+      Get.offNamed(_pages[page], id: NAVIGATOR_KEY);
     }
 
     /* aprimorando o codigo  
